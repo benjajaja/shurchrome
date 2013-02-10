@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "FC Masmola +1",
+  "description": "Extensión para forocoches",
+  "version": "1.2",
+  "page_action": {
+    "default_name": "",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "http://www.forocoches.com/*",
+    "storage",
+    "notifications",
+    "alarms",
+    "contentSettings",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["jquery-1.9.1.min.js", "utils.js", "background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    { "matches": ["http://www.forocoches.com/*"], "js": ["jquery-1.9.1.min.js", "utils.js", "contentscript.js"], "run_at": "document_end" }
+  ],
+  "web_accessible_resources": [
+    "roto2.png"
+  ]
+}

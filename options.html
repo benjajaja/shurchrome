@@ -1,0 +1,79 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Shurchrome options</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="bootstrap.responsive.min.css" />
+	<style type="text/css">
+	input[type="number"] {
+		height: 26px;
+	}
+	</style>
+</head>
+
+<body>
+
+<h2>Opciones de Shurchrome +1 masmola</h2>
+<div class="container-fluid">
+	<form>
+		<legend>Eliminación de basura</legend>
+		<fieldset>
+			<label class="checkbox">
+	    		<input type="checkbox" id="disableJS"> Deshabilitar Javascript completamente en forocoches.com
+	    	</label>
+			<span class="help-block">La opción mas rápida y eficaz de acabar con la lentitud de FC, pero no se ven los vídeos empotrados, serán sustituidos por un enlace</span>
+		</fieldset>
+
+		<fieldset>
+			<label class="checkbox">
+	    		<input type="checkbox" id="removeAds"> Quitar publi
+	    	</label>
+		</fieldset>
+
+		<fieldset>
+			<label class="checkbox">
+	    		<input type="checkbox" id="liftpage"> Quitar marco general innecesario
+	    	</label>
+		</fieldset>
+	</form>
+
+	<form>
+		<legend>Notificaciones</legend>
+		<fieldset>
+			<label class="checkbox">
+	    		<input type="checkbox" id="enableNotifications"> Detectar y notificarme cuando se me cita
+	    		<span class="help-block">Se realiza una búsqueda por tu nombre de usuario cada 5 minutos. Se guarda el ID de búsqueda para menor carga, tanto para Chrome como para FC. LA extensión no se queda activa en segundo plano.</span>
+	    	</label>
+		</fieldset>
+
+		<fieldset>
+			<label>Nombre del usuario detectado (se detecta automáticamente al abrir forocoches):</label>
+	    	<input type="text" id="username" />
+		</fieldset>
+
+		<fieldset>
+			<label>ID de búsqueda del nombre de usuario:</label>
+	    	<input type="text" id="search" readonly />
+		</fieldset>
+
+		<fieldset>
+			<label>Retardo entre consultas:</label>
+	    	<input type="number" id="delay" class="input-small" />
+		</fieldset>
+
+		<fieldset>
+			<label>Citaciones anteriores:</label>
+			<ul id="quotes">
+				<li class="muted">(Cargando...)</li>
+			</ul>
+		</fieldset>
+
+		<button type="button" id="reset" class="btn">Restablecer</button>
+	</form>
+</div>
+</body>
+
+<script src="utils.js"></script>
+<script src="options.js"></script>
+
+</html>
